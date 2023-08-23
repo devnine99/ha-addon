@@ -1,0 +1,153 @@
+name: ezvill to MQTT
+version: 1.0.0
+slug: ezvill
+url: https://github.com/devnine99/ha-addon
+description: mqtt를 통해 이지빌 월패드를 제어할 수 있는 애드온
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+map:
+  - share:rw
+startup: application
+boot: auto
+options:
+  mqtt_ip: 192.168.x.x
+  mqtt_port: 1883
+  mqtt_id: id
+  mqtt_pw: pwd
+  ew11_sub_topic: ew11/set
+  ew11_pub_topic: ew11/state
+  device_set:
+    - unique_id: livingroom_light1
+      kind: light
+      room_name: 거실
+      device_name: 거실 조명1
+      on: f70e1141030121008a06
+      off: f70e114103010000ab06
+      state_on:
+        - f70e118104002302004c0c
+        - f70e118104002323006d4e
+        - f70e118104002302014d0e
+        - f70e118104002323016c4e
+      state_off:
+        - f70e118104000202006d0c
+        - f70e118104000223004c0c
+        - f70e118104000202016c0c
+        - f70e118104000223014d0e
+    - unique_id: livingroom_light2
+      kind: light
+      room_name: 거실
+      device_name: 거실 조명2
+      on: f70e1141030221008906
+      off: f70e114103020000a804
+      state_on:
+        - f70e118104000223004c0c
+        - f70e118104002323006d4e
+        - f70e118104000223014d0e
+        - f70e118104002323016c4e
+      state_off:
+        - f70e118104000202006d0c
+        - f70e118104002302004c0c
+        - f70e118104000202016c0c
+        - f70e118104002302014d0e
+    - unique_id: livingroom_light3
+      kind: light
+      room_name: 거실
+      device_name: 거실 조명3
+      on: f70e114103030100a806
+      off: f70e114103030000a906
+      state_on:
+        - f70e118104000202016c0c
+        - f70e118104002302014d0e
+        - f70e118104000223014d0e
+        - f70e118104002323016c4e
+      state_off:
+        - f70e118104000202006d0c
+        - f70e118104002302004c0c
+        - f70e118104000223004c0c
+        - f70e118104002323006d4e
+    - unique_id: livingroom_light4
+      kind: light
+      room_name: 거실
+      device_name: 거실 조명4
+      on: f739114101118e22
+      off: f739114101108f22
+      state_on:
+        - f73911c10200011d22
+      state_off:
+        - f73911c10200001c20
+    - unique_id: room1_light1
+      kind: light
+      room_name: 안방
+      device_name: 안방 조명1
+      on: f70e124103010100a906
+      off: f70e124103010000a804
+      state_on:
+        - f70e1281030001006804
+        - f70e1281030001016906
+      state_off:
+        - f70e1281030000006904
+        - f70e1281030000016804
+    - unique_id: room1_light2
+      kind: light
+      room_name: 안방
+      device_name: 안방 조명2
+      on: f70e124103020100aa08
+      off: f70e124103020000ab08
+      state_on:
+        - f70e1281030000016804
+        - f70e1281030001016906
+      state_off:
+        - f70e1281030000006904
+        - f70e1281030001006804
+    - unique_id: room2_light1
+      kind: light
+      room_name: 아기방
+      device_name: 아기방 조명1
+      on: f70e134103010100a806
+      off: f70e134103010000a906
+      state_on:
+        - f70e13810200016804
+      state_off:
+        - f70e13810200006904
+    - unique_id: room3_light1
+      kind: light
+      room_name: 지나방
+      device_name: 지나방 조명1
+      on: f70e144103010100af0e
+      off: f70e144103010000ae0c
+      state_on:
+        - f70e14810200016f0c
+      state_off:
+        - f70e14810200006e0a
+    - unique_id: elevator
+      kind: switch
+      room_name: 엘베
+      device_name: 엘베
+      on: f7330181030024006336
+      off: f7330181030024006335
+      state_on:
+        - f73301c3030014001116
+      state_off:
+        - f73301810300040043f6
+schema:
+  mqtt_ip: str
+  mqtt_port: int
+  mqtt_id: str
+  mqtt_pw: str
+  ew11_sub_topic: str
+  ew11_pub_topic: str
+  device_set:
+    - unique_id: str
+      kind: str
+      room_name: str
+      device_name: str
+      on: str
+      off: str
+      state_on:
+        - str
+      state_off:
+        - str
