@@ -57,6 +57,16 @@ options:
       kind: light
       room_name: 거실
       device_name: 거실 조명3
+      on: f739114101118e22
+      off: f739114101108f22
+      state_on:
+        - f73911c10200011d22
+      state_off:
+        - f73911c10200001c20
+    - unique_id: corridor_light1
+      kind: light
+      room_name: 복도
+      device_name: 복도 조명3
       on: f70e114103030100a806
       off: f70e114103030000a906
       state_on:
@@ -69,16 +79,6 @@ options:
         - f70e118104002302004c0c
         - f70e118104000223004c0c
         - f70e118104002323006d4e
-    - unique_id: livingroom_light4
-      kind: light
-      room_name: 거실
-      device_name: 거실 조명4
-      on: f739114101118e22
-      off: f739114101108f22
-      state_on:
-        - f73911c10200011d22
-      state_off:
-        - f73911c10200001c20
     - unique_id: room1_light1
       kind: light
       room_name: 안방
