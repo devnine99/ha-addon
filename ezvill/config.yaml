@@ -66,7 +66,7 @@ options:
     - unique_id: corridor_light1
       kind: light
       room_name: 복도
-      device_name: 복도 조명3
+      device_name: 복도 조명1
       on: f70e114103030100a806
       off: f70e114103030000a906
       state_on:
